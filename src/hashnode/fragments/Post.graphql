@@ -1,6 +1,14 @@
 fragment Post on Post {
   id
   title
+  subtitle
+  seo {
+    title
+    description
+  }
+  publication {
+    id
+  }
   url
   author {
     name
