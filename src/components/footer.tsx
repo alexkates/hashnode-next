@@ -24,7 +24,11 @@ function Footer() {
         .
       </span>
       <span>
-        The source code is available on&nbsp;
+        Template build by{" "}
+        <Link href="https://twitter.com/thealexkates" target="_blank" rel="noreferrer" className="underline">
+          Alex Kates
+        </Link>
+        . The source code is available on&nbsp;
         <Link href="https://github.com/alexkates/alexkates.dev" target="_blank" rel="noreferrer" className="underline">
           GitHub
         </Link>
