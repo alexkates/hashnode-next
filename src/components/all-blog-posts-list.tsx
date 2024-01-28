@@ -1,5 +1,5 @@
-import BlogPostList from "./blog-post-list";
 import getAllBlogPosts from "@/server/get-all-blog-posts";
+import BlogPostList from "./blog-post-list";
 
 type Props = {
   query?: string;

@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
 import { Post } from "@/hashnode/generated/graphql";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "./ui/badge";
