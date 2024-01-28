@@ -7,9 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
+    "@graphql-typed-document-node/core": "^3.2.0",
     "@hookform/resolvers": "^3.3.4",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -45,6 +47,7 @@
     "cmdk": "^0.2.0",
     "date-fns": "^3.3.1",
     "embla-carousel-react": "8.0.0-rc21",
+    "graphql-request": "^6.1.0",
     "lucide-react": "^0.316.0",
     "next": "14.1.0",
     "next-themes": "^0.2.1",
@@ -60,6 +63,10 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typed-document-node": "^5.0.1",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

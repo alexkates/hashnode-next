@@ -1,0 +1,19 @@
+query GetPosts($host: String!, $first: Int!, $after: String) {
+  publication(host: $host) {
+    ...Publication
+    posts(first: $first, after: $after) {
+      totalDocuments
+      edges {
+        node {
+          ...Post
+          comments(first: 0) {
+            totalDocuments
+          }
+        }
+      }
+      pageInfo {
+        ...PageInfo
+      }
+    }
+  }
+}
