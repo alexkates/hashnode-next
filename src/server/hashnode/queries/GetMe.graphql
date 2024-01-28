@@ -1,0 +1,26 @@
+query Me {
+  me {
+    username
+    name
+    profilePicture
+    socialMediaLinks {
+      website
+      github
+      twitter
+      instagram
+      facebook
+      stackoverflow
+      linkedin
+      youtube
+    }
+    bio {
+      html
+    }
+    badges {
+      name
+      image
+      dateAssigned
+      description
+    }
+  }
+}
