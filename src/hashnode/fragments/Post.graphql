@@ -19,5 +19,10 @@ fragment Post on Post {
   readTimeInMinutes
   content {
     markdown
+    text
+  }
+  tags {
+    name
+    postsCount
   }
 }
