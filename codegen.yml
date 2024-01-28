@@ -1,12 +1,12 @@
 schema: https://gql.hashnode.com
 documents: "./src/**/hashnode/**/*.graphql"
 generates:
-  ./src/server/hashnode/generated/schema.graphql:
+  ./src/hashnode/generated/schema.graphql:
     plugins:
       - schema-ast
     config:
       includeDirectives: true
-  ./src/server/hashnode/generated/graphql.ts:
+  ./src/hashnode/generated/graphql.ts:
     plugins:
       - typescript
       - typescript-operations
