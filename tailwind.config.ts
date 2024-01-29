@@ -69,11 +69,10 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in duration-1000 fill-mode-both",
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("tailwindcss-animation-delay")],
+  plugins: [require("tailwindcss-animate"), require("tailwindcss-animation-delay"), require("@tailwindcss/typography")],
 } satisfies Config;
 
 export default config;
