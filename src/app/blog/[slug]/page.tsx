@@ -1,5 +1,6 @@
 import Analytics from "@/components/analytics";
 import { Mdx } from "@/components/mdx";
+import { cn, fadeIn } from "@/lib/utils";
 import getBlogPost from "@/server/get-blog-post";
 import { Metadata } from "next/types";
 
@@ -61,13 +62,13 @@ export default async function Page({ params }: Props) {
 
   return (
     <main>
-      <span className="mb-8 flex flex-col gap-1">
+      <section className={cn(fadeIn, "animation-delay-200 mb-8 flex flex-col gap-1")}>
         <h1 className="text-3xl font-bold">{title}</h1>
         <h3 className="text-xs font-light">
           {new Date(publishedAt).toLocaleDateString()} • {views} views • {readTimeInMinutes} min read
         </h3>
-      </span>
-      <article>
+      </section>
+      <article className={cn(fadeIn, "animation-delay-400")}>
         <Mdx code={markdown} />
       </article>
       <Analytics postId={id} publicationId={publication?.id!} />

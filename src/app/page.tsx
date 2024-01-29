@@ -1,8 +1,7 @@
 import BadgeList from "@/components/badge-list";
 import { Mdx } from "@/components/mdx";
-import { cn } from "@/lib/utils";
+import { cn, fadeIn } from "@/lib/utils";
 import getMe from "@/server/get-me";
-const fadeIn = "animate-in fade-in duration-1000 fill-mode-both";
 
 export default async function Home() {
   const me = await getMe();
