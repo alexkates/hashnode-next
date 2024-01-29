@@ -8,9 +8,8 @@ type Props = {
 };
 
 export default function BadgeListItem({ badge }: Props) {
-  const fadeIn = "animate-in fade-in duration-1000 fill-mode-both";
   return (
-    <li className={cn("flex flex-col items-center", fadeIn)}>
+    <li className={cn("flex flex-col items-center")}>
       <Card className="transition-transform duration-300 ease-in-out hover:scale-[1.025]">
         <CardHeader>{badge.image && <Image width={200} height={150} alt={badge.image} src={badge.image} className="rounded-md" />}</CardHeader>
         <CardFooter className="flex flex-col gap-y-1">

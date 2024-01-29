@@ -1,5 +1,4 @@
 import { Post } from "@/hashnode/generated/graphql";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "./ui/badge";
@@ -10,9 +9,8 @@ type Props = {
 };
 
 export default function BlogPostListItem({ post }: Props) {
-  const fadeIn = "animate-in fade-in duration-1000 fill-mode-both";
   return (
-    <li className={cn("flex flex-col items-center", fadeIn)}>
+    <li className="flex flex-col items-center">
       <Link href={`/blog/${post.slug}`}>
         <Card className="transition-transform duration-300 ease-in-out hover:scale-[1.025]">
           <CardHeader>
