@@ -1,5 +1,4 @@
 import { Badge } from "@/hashnode/generated/graphql";
-import React from "react";
 import BadgeListItem from "./badge-list-item";
 
 type Props = {

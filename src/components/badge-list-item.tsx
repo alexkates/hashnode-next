@@ -1,4 +1,4 @@
-import { Badge, Post } from "@/hashnode/generated/graphql";
+import { Badge } from "@/hashnode/generated/graphql";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Card, CardFooter, CardHeader } from "./ui/card";
