@@ -1,7 +1,6 @@
 import { Badge } from "@/hashnode/generated/graphql";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { Card, CardFooter, CardHeader } from "./ui/card";
+import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 
 type Props = {
   badge: Badge;
@@ -9,15 +8,21 @@ type Props = {
 
 export default function BadgeListItem({ badge }: Props) {
   return (
-    <li className={cn("flex flex-col items-center")}>
+    <li className="prose prose-neutral dark:prose-invert">
       <Card className="transition-transform duration-300 ease-in-out hover:scale-[1.025]">
-        <CardHeader>{badge.image && <Image width={200} height={150} alt={badge.image} src={badge.image} className="rounded-md" />}</CardHeader>
-        <CardFooter className="flex flex-col gap-y-1">
-          <div className="prose prose-neutral dark:prose-invert flex w-full justify-end text-xs">
-            <span>{new Date(badge.dateAssigned!).toLocaleDateString()}</span>
-            <span className="mx-1">•</span>
+        <CardHeader>
+          <div className="flex items-center gap-2">
+            <Image width={20} height={20} alt={badge.image} src={badge.image} className="rounded-md" />
+            <h2>{badge.name}</h2>
           </div>
-          <div className="prose prose-neutral dark:prose-invert flex w-full justify-end gap-x-2"></div>
+        </CardHeader>
+        <CardContent>
+          <p className="min-h-20">{badge.description}</p>
+        </CardContent>
+        <CardFooter className="flex flex-col gap-y-1">
+          <div className="flex w-full justify-end text-xs">
+            <span>{new Date(badge.dateAssigned!).toLocaleDateString()}</span>
+          </div>
         </CardFooter>
       </Card>
     </li>
