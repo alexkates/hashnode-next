@@ -1,6 +1,6 @@
 import { Post } from "@/hashnode/generated/graphql";
 import { SortTypes } from "@/types/sort-types";
-import BlogPostItem from "./blog-post-item";
+import BlogPostListItem from "./blog-post-list-item";
 
 type Props = {
   posts: Post[];
@@ -23,7 +23,7 @@ function BlogPostList({ posts, query = "", sort = "", tags = "" }: Props) {
   const tagsArray = tags?.split(",").filter((t) => t !== "");
 
   return (
-    <ul className="xl:grd-cols-3 grid grid-cols-1 gap-8 sm:grid-cols-2">
+    <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2">
       {sortedPosts
         .filter((post) => {
           const isMatchingQuery = post.content.text?.toLowerCase().includes(query?.toLowerCase() ?? "");
@@ -31,7 +31,7 @@ function BlogPostList({ posts, query = "", sort = "", tags = "" }: Props) {
           return isMatchingQuery && isMatchingTags;
         })
         .map((post) => (
-          <BlogPostItem key={post.id} post={post} />
+          <BlogPostListItem key={post.id} post={post} />
         ))}
     </ul>
   );

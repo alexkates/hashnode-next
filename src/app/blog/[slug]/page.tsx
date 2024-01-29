@@ -60,7 +60,7 @@ export default async function Page({ params }: Props) {
   } = blogPost;
 
   return (
-    <section>
+    <main>
       <span className="mb-8 flex flex-col gap-1">
         <h1 className="text-3xl font-bold">{title}</h1>
         <h3 className="text-xs font-light">
@@ -71,6 +71,6 @@ export default async function Page({ params }: Props) {
         <Mdx code={markdown} />
       </article>
       <Analytics postId={id} publicationId={publication?.id!} />
-    </section>
+    </main>
   );
 }

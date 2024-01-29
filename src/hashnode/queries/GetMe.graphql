@@ -14,9 +14,10 @@ query Me {
       youtube
     }
     bio {
-      html
+      markdown
     }
     badges {
+      id
       name
       image
       dateAssigned

@@ -9,7 +9,7 @@ type Props = {
   post: Post;
 };
 
-export default function BlogPostItem({ post }: Props) {
+export default function BlogPostListItem({ post }: Props) {
   const fadeIn = "animate-in fade-in duration-1000 fill-mode-both";
   return (
     <li className={cn("flex flex-col items-center", fadeIn)}>
