@@ -24,7 +24,7 @@ function Footer() {
         .
       </span>
       <span>
-        Template build by{" "}
+        Template built by{" "}
         <Link href="https://twitter.com/thealexkates" target="_blank" rel="noreferrer" className="underline">
           Alex Kates
         </Link>
