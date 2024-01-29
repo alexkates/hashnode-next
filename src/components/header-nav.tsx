@@ -27,6 +27,10 @@ export function HeaderNav() {
       href: `/blog?${blogSearchParams.toString()}`,
       label: "blog",
     },
+    {
+      href: "/about",
+      label: "about",
+    },
   ];
 
   return (

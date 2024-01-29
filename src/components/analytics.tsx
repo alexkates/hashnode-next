@@ -9,7 +9,7 @@ type Props = {
   postId: string;
 };
 
-const GA_TRACKING_ID = "G-72XG3F8LNJ"; // This is Hashnode's GA tracking ID
+export const GA_TRACKING_ID = "G-72XG3F8LNJ"; // This is Hashnode's GA tracking ID
 
 export default function Analytics({ publicationId, postId }: Props) {
   useEffect(() => {
@@ -97,6 +97,8 @@ export default function Analytics({ publicationId, postId }: Props) {
     };
 
     const _sendPageViewsToHashnodeGoogleAnalytics = () => {
+      // @ts-ignore
+      if (!window.gtag) return;
       // @ts-ignore
       window.gtag("config", GA_TRACKING_ID, {
         transport_url: "https://ping.hashnode.com",

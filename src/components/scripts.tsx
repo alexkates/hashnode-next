@@ -1,5 +1,7 @@
 "use client";
 
+import { GA_TRACKING_ID } from "./analytics";
+
 export default function Scripts() {
   const googleAnalytics = `
     window.dataLayer = window.dataLayer || [];
@@ -7,7 +9,7 @@ export default function Scripts() {
     gtag('js', new Date());`;
   return (
     <>
-      <script async src={`https://ping.hashnode.com/gtag/js?id=G-72XG3F8LNJ`} />
+      <script async src={`https://ping.hashnode.com/gtag/js?id=${GA_TRACKING_ID}`} />
       <script dangerouslySetInnerHTML={{ __html: googleAnalytics }} />
     </>
   );
