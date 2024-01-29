@@ -8,12 +8,12 @@ type Props = {
 
 export default function BadgeListItem({ badge }: Props) {
   return (
-    <li className="prose prose-neutral dark:prose-invert">
+    <li>
       <Card className="transition-transform duration-300 ease-in-out hover:scale-[1.025]">
         <CardHeader>
           <div className="flex items-center gap-2">
             <Image width={20} height={20} alt={badge.image} src={badge.image} className="rounded-md" />
-            <h2>{badge.name}</h2>
+            <span>{badge.name}</span>
           </div>
         </CardHeader>
         <CardContent>
