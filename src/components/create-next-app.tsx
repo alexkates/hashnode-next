@@ -2,12 +2,13 @@
 
 import { CopyIcon } from "@radix-ui/react-icons";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
+import { useToast } from "./ui/use-toast";
 
 const githubUrl = "https://github.com/alexkates/hashnode-next";
 
 export default function CreateNextApp() {
   return (
-    <div className="prose prose-neutral dark:prose-invert">
+    <div className="prose prose-neutral dark:prose-invert hidden md:block">
       <pre className="flex items-center gap-2 p-8">
         npx create-next-app -e {githubUrl}
         <PackageManagerCommands />
@@ -24,15 +25,23 @@ const commands = [
 ];
 
 function PackageManagerCommands() {
+  const { toast } = useToast();
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
         <CopyIcon className="h-4 w-4" />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        {commands.map((cmd) => (
-          <DropdownMenuItem key={cmd.name} onClick={async () => await handleCopyClick(cmd.command)}>
-            {cmd.name}
+        {commands.map(({ name, command }) => (
+          <DropdownMenuItem
+            key={name}
+            onClick={async () => {
+              await handleCopyClick({ command });
+              toast({ description: `Copied ${name} command to clipboard.` });
+            }}
+          >
+            {name}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
@@ -40,6 +49,6 @@ function PackageManagerCommands() {
   );
 }
 
-async function handleCopyClick(text: string) {
-  navigator?.clipboard?.writeText(text);
+async function handleCopyClick({ command }: { command: string }) {
+  await navigator?.clipboard?.writeText(command);
 }

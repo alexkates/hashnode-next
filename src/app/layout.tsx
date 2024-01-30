@@ -2,6 +2,7 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Providers from "@/components/providers";
 import Scripts from "@/components/scripts";
+import { Toaster } from "@/components/ui/toaster";
 import { validateEnvVars } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -32,6 +33,7 @@ export default function RootLayout({
             <Footer />
           </Providers>
         </div>
+        <Toaster />
       </body>
     </html>
   );
