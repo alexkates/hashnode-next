@@ -14,13 +14,9 @@ export async function generateMetadata({ params }: Props) {
   const post = await getBlogPost(params);
   const title = post?.seo?.title || post?.title;
   const description = post?.seo?.description || post?.subtitle || post?.title;
-  const url = `${process.env.NEXT_PUBLIC_SITE_URL}/blog/${params.slug}`;
   const images = post?.coverImage?.url;
 
   const metadata: Metadata = {
-    alternates: {
-      canonical: url,
-    },
     title,
     description,
     openGraph: {
@@ -28,7 +24,6 @@ export async function generateMetadata({ params }: Props) {
       description,
       type: "article",
       siteName: "Alex Kates | Blog",
-      url,
       images,
     },
     twitter: {
