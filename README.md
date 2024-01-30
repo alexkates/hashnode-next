@@ -18,6 +18,12 @@
 pnpm dlx create-next-app -e https://github.com/alexkates/hashnode-next
 ```
 
+## Environment Variables
+
+[.env.example](.env.example) contains all the environment variables you need to get started. You can copy this file and rename it to `.env.local` to get started.
+
+**Note:** You will need a [Hashnode API key](https://hashnode.com/settings/developer) to view the [about](src/app/about/page.tsx) page because the [GetMe](src/server/get-me.ts) query requires authentication. You can read more about Hashnode API keys [here](https://apidocs.hashnode.com/#introduction-item-4).
+
 ## Contributing
 
 Please read through our [contributing guide](.github/CONTRIBUTING.md) before starting any work.
