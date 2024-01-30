@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import Spotlight from "@/components/ui/spotlight";
 import { GitHubLogoIcon, VercelLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { Balancer } from "react-wrap-balancer";
@@ -8,7 +7,6 @@ export default async function Page() {
   return (
     <main className="flex flex-col gap-4 pb-12 pt-4 text-center sm:items-center sm:gap-8 sm:py-20">
       <div className="flex flex-1 flex-col items-center gap-4 text-center sm:gap-8">
-        <Spotlight className="hidden sm:block sm:left-40 sm:-top-60" fill="white" />
         <div className="gap-8 flex flex-col items-center">
           <div className="flex flex-col gap 2">
             <h1 className="text-4xl font-bold sm:text-6xl">hashnode-next</h1>
