@@ -15,7 +15,7 @@
 ## Getting Started
 
 ```sh
-pnpm dlx create-next-app -e https://github.com/alexkates/hashnode-next
+npm create-next-app -e https://github.com/alexkates/hashnode-next
 ```
 
 ## Environment Variables
