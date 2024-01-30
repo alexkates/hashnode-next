@@ -14,7 +14,7 @@ export default async function Page() {
           </div>
           <h3 className="text-lg lg:text-xl">
             <Balancer>
-              Beautiful and minimalist Hashnode starter-kit powered by{" "}
+              Beautifully simple Hashnode starter-kit powered by{" "}
               <Link className="underline underline-offset-2" href="https://nextjs.org/" target="_blank">
                 Next.js 14
               </Link>
