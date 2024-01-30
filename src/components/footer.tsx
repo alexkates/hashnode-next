@@ -10,7 +10,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="my-4 flex flex-col items-center justify-center text-sm leading-snug text-muted-foreground">
+    <footer className="mb-8 mt-12 flex flex-col items-center justify-center text-sm leading-snug text-muted-foreground">
       <span>
         Powered by&nbsp;
         {links.map((link, index) => (

@@ -1,6 +1,6 @@
 import { Skeleton } from "./ui/skeleton";
 
-function BlogPostListSkeleton() {
+function CardListSkeleton() {
   return (
     <ul className="xl:grd-cols-3 mt-4 grid grid-cols-1 gap-8 sm:grid-cols-2">
       {Array.from({ length: 6 }).map((_, i) => (
@@ -16,4 +16,4 @@ function BlogPostListSkeleton() {
   );
 }
 
-export default BlogPostListSkeleton;
+export default CardListSkeleton;

@@ -1,11 +1,9 @@
-import { Badge } from "@/hashnode/generated/graphql";
+import getMe from "@/server/get-me";
 import BadgeListItem from "./badge-list-item";
 
-type Props = {
-  badges: Badge[];
-};
+export default async function BadgeList() {
+  const { badges } = await getMe();
 
-export default function BadgeList({ badges }: Props) {
   return (
     <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2">
       {badges.map((badge) => (
