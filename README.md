@@ -26,6 +26,12 @@ npx create-next-app -e https://github.com/alexkates/hashnode-next/blob/main
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+## Authors
+
+<a href="https://github.com/alexkates/hashnode-next/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=alexkates/hashnode-next" />
+</a>
+
 ## Stats
 
 ![Alt](https://repobeats.axiom.co/api/embed/31e702ad0bc3e2c1d5fa3bf57d06845b2a052336.svg "Repobeats analytics image")
