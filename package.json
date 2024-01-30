@@ -47,6 +47,7 @@
     "cmdk": "^0.2.0",
     "date-fns": "^3.3.1",
     "embla-carousel-react": "8.0.0-rc21",
+    "framer-motion": "^11.0.3",
     "graphql-request": "^6.1.0",
     "js-cookie": "^3.0.5",
     "lucide-react": "^0.316.0",
