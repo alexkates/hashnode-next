@@ -15,7 +15,7 @@
 ## Getting Started
 
 ```sh
-npm create-next-app -e https://github.com/alexkates/hashnode-next
+npx create-next-app -e https://github.com/alexkates/hashnode-next
 ```
 
 ## Environment Variables
