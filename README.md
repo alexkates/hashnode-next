@@ -26,6 +26,10 @@ npx create-next-app -e https://github.com/alexkates/hashnode-next/blob/main
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+## Stats
+
+![Alt](https://repobeats.axiom.co/api/embed/31e702ad0bc3e2c1d5fa3bf57d06845b2a052336.svg "Repobeats analytics image")
+
 ## License
 
 Distributed under the MIT License. See <a href="https://github.com/alexkates/hashnode-next/blob/main/LICENSE.md" _target="blank">license</a> for more information.
