@@ -15,7 +15,7 @@
 ## Getting Started
 
 ```sh
-npx create-next-app -e https://github.com/alexkates/hashnode-next/blob/main
+pnpm dlx create-next-app -e https://github.com/alexkates/hashnode-next
 ```
 
 ## Contributing
