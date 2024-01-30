@@ -20,10 +20,12 @@ npx create-next-app -e https://github.com/alexkates/hashnode-next/blob/main
 
 ## Contributing
 
+Please read through our [contributing guide](.github/CONTRIBUTING.md) before starting any work.
+
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch (`git checkout -b feature/my-amazing-feature`)
+3. Commit your Changes (`git commit -am 'Add some my-amazing-feature'`)
+4. Push to the Branch (`git push origin feature/my-amazing-feature`)
 5. Open a Pull Request
 
 ## Authors
@@ -38,4 +40,4 @@ npx create-next-app -e https://github.com/alexkates/hashnode-next/blob/main
 
 ## License
 
-Distributed under the MIT License. See <a href="https://github.com/alexkates/hashnode-next/blob/main/LICENSE.md" _target="blank">license</a> for more information.
+Distributed under the MIT License. See the [license](LICENSE.md) for more information.
