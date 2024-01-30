@@ -15,7 +15,7 @@
 ## Getting Started
 
 ```sh
-npx create-next-app -e https://github.com/alexkates/hashnode-next
+npx create-next-app -e https://github.com/alexkates/hashnode-next/blob/main
 ```
 
 1. Fork the Project
@@ -28,15 +28,4 @@ npx create-next-app -e https://github.com/alexkates/hashnode-next
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<!-- ACKNOWLEDGMENTS -->
-
-## Acknowledgments
-
-- [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-- [Malven's Grid Cheatsheet](https://grid.malven.co/)
-- [Img Shields](https://shields.io)
-- [GitHub Pages](https://pages.github.com)
-- [Font Awesome](https://fontawesome.com)
-- [React Icons](https://react-icons.github.io/react-icons/search)
+Distributed under the MIT License. See <a href="https://github.com/alexkates/hashnode-next/blob/main/LICENSE.md" _target="blank">license</a> for more information.
