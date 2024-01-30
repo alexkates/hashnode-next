@@ -23,7 +23,7 @@ function Footer() {
         ))}
         .
       </span>
-      <span>
+      <span className="text-center">
         Template built by{" "}
         <Link href="https://twitter.com/thealexkates" target="_blank" rel="noreferrer" className="underline">
           Alex Kates
