@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="src/app/opengraph-image.png" />
+    <img src="public/opengraph-image.png" />
     <br />
     <a href="https://hashnode-next.vercel.app">View Demo</a>
     ·
@@ -11,7 +11,7 @@
 
 ## Getting Started
 
-```sh
+```console
 npx create-next-app -e https://github.com/alexkates/hashnode-next
 ```
 
