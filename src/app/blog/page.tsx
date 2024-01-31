@@ -24,7 +24,9 @@ export default async function Page({
       <section className={cn(fadeIn, "animation-delay-200 flex gap-x-2")}>
         <Search placeholder="Search blog posts..." />
         <Sort />
-        <BlogTagsFilter />
+        <Suspense fallback={null}>
+          <BlogTagsFilter />
+        </Suspense>
       </section>
       <section className={cn(fadeIn, "animation-delay-400")}>
         <Suspense fallback={<CardListSkeleton />}>
