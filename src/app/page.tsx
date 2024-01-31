@@ -1,7 +1,6 @@
 import CreateNextApp from "@/components/create-next-app";
 import { Button } from "@/components/ui/button";
-import VercelDeployButton from "@/components/vercel-deploy-button";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, VercelLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { Balancer } from "react-wrap-balancer";
 
@@ -25,7 +24,15 @@ export default async function Page() {
         </Balancer>
       </h3>
       <div className="flex items-center gap-8">
-        <VercelDeployButton />
+        <Button asChild size="lg">
+          <Link
+            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Falexkates%2Fhashnode-next&env=HASHNODE_API_KEY,HASHNODE_API_URL,HASHNODE_HOST&envDescription=Hashnode%20docs&envLink=https%3A%2F%2Fapidocs.hashnode.com%2F&project-name=blog&repository-name=blog"
+            target="_blank"
+          >
+            <VercelLogoIcon className="mr-2 h-4 w-4" /> Deploy
+          </Link>
+        </Button>
+
         <Button asChild size="lg" variant="secondary">
           <Link href="https://github.com/alexkates/hashnode-next" target="_blank">
             <GitHubLogoIcon className="mr-2 h-4 w-4" /> GitHub
