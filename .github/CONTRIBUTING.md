@@ -2,7 +2,7 @@
 
 ## Welcome Contributions!
 
-Thank you for considering contributing to hasnode-next. Your contributions are highly valued and appreciated.
+Thank you for considering contributing to hashnode-next. Your contributions are highly valued and appreciated.
 
 ## The basics
 
