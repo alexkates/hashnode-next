@@ -6,7 +6,7 @@ Thank you for considering contributing to hashnode-next. Your contributions are 
 
 ## The basics
 
-- Before submitting a new issue or PR, check if it already exists in [issues](https://github.com/unkeyed/unkey/issues) or [PRs](https://github.com/unkeyed/unkey/pulls).
+- Before submitting a new issue or PR, check if it already exists in [issues](https://github.com/alexkates/hashnode-next/issues) or [PRs](https://github.com/alexkates/hashnode-next/pulls).
 - If there isn't an issue please _create one_ before any development begins
 - If you're working on an issue, please _comment_ on it so that others know you're working on it
 
