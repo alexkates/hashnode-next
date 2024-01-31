@@ -2,7 +2,7 @@
   <h3 align="center">hashnode-next</h3>
 
   <p align="center">
-  The fastest way to go headless with Hashnode.<br/>Beautifully simple Hashnode starter-kit powered by <a target="_blank" href="https://nextjs.org/">Next.js 14</a> and <a target="_blank" href="https://ui.shadcn.com/">shadcn/ui</a>
+  The fastest way to go headless with Hashnode.<br/>Beautifully simple Hashnode starter-kit powered by <a target="_blank" href="https://nextjs.org/">Next.js</a> and <a target="_blank" href="https://ui.shadcn.com/">shadcn/ui</a>
     <br />
     <a href="https://hashnode-next.vercel.app">View Demo</a>
     ·

@@ -13,10 +13,9 @@ export default async function Page() {
       <h3 className="text-lg sm:text-xl">
         <div>Beautifully simple Hashnode starter-kit</div>
         <div>
-          {" "}
-          powered by
+          powered by&nbsp;
           <Link className="underline underline-offset-2" href="https://nextjs.org/" target="_blank">
-            Next.js 14
+            Next.js
           </Link>
           &nbsp;and&nbsp;
           <Link className="underline underline-offset-2" href="https://ui.shadcn.com/" target="_blank">
