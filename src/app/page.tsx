@@ -2,7 +2,6 @@ import CreateNextApp from "@/components/create-next-app";
 import { Button } from "@/components/ui/button";
 import { GitHubLogoIcon, VercelLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
-import { Balancer } from "react-wrap-balancer";
 
 export default async function Page() {
   return (
@@ -12,8 +11,10 @@ export default async function Page() {
         <h2 className="text-lg font-light text-muted-foreground sm:text-xl">The fastest way to go headless with Hashnode</h2>
       </div>
       <h3 className="text-lg sm:text-xl">
-        <Balancer>
-          Beautifully simple Hashnode starter-kit powered by{" "}
+        <div>Beautifully simple Hashnode starter-kit</div>
+        <div>
+          {" "}
+          powered by
           <Link className="underline underline-offset-2" href="https://nextjs.org/" target="_blank">
             Next.js 14
           </Link>
@@ -21,7 +22,7 @@ export default async function Page() {
           <Link className="underline underline-offset-2" href="https://ui.shadcn.com/" target="_blank">
             shadcn/ui
           </Link>
-        </Balancer>
+        </div>
       </h3>
       <div className="flex items-center gap-8">
         <Button asChild size="lg">
