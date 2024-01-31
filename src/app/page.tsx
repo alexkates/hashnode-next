@@ -57,7 +57,7 @@ export default async function Page() {
       <section className={cn(fadeIn, "flex items-center gap-8 animation-delay-600")}>
         <Button asChild size="lg">
           <Link
-            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Falexkates%2Fhashnode-next&env=HASHNODE_API_KEY,HASHNODE_API_URL,HASHNODE_HOST&envDescription=HASHNODE_API_URL%20is%20almost%20always%20https%3A%2F%2Fgql.hashnode.com.&envLink=https%3A%2F%2Fapidocs.hashnode.com&project-name=blog&repository-name=blog&demo-title=hashnode-next&demo-description=An%20example%20blog%20scaffolded%20using%20hashnode-next&demo-url=https%3A%2F%2Fhashnode-next.dev%2Fblog&demo-image=https%3A%2F%2Fhashnode-next.dev%2Fdemo.png"
+            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Falexkates%2Fhashnode-next&env=HASHNODE_API_KEY,HASHNODE_API_URL,HASHNODE_HOST&envDescription=HASHNODE_API_URL%20is%20almost%20always%20https%3A%2F%2Fgql.hashnode.com.&envLink=https%3A%2F%2Fapidocs.hashnode.com&project-name=blog&repository-name=blog&demo-title=hashnode-next&demo-description=The%20fastest%20way%20to%20go%20headless%20with%20Hashnode&demo-url=https%3A%2F%2Fhashnode-next.dev%2Fblog&demo-image=https%3A%2F%2Fhashnode-next.dev%2Fdemo.png"
             target="_blank"
           >
             <VercelLogoIcon className="mr-2 h-4 w-4" /> Deploy
