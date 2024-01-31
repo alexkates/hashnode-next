@@ -1,7 +1,5 @@
 # Contributing to hashnode-next
 
-## Welcome Contributions!
-
 Thank you for considering contributing to hashnode-next. Your contributions are highly valued and appreciated.
 
 ## The basics
