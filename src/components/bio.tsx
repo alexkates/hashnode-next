@@ -1,8 +1,8 @@
-import getMe from "@/server/get-me";
+import getUser from "@/server/get-user";
 import { Mdx } from "./mdx";
 
 export default async function bio() {
-  const { bio } = await getMe();
+  const { bio } = await getUser();
 
   return <Mdx code={bio?.markdown as string} />;
 }

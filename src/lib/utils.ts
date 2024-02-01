@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 export const fadeIn = "animate-in fade-in duration-1000 fill-mode-both";
 
 export function validateEnvVars() {
-  const requiredEnvVars = ["HASHNODE_API_URL", "HASHNODE_HOST", "HASHNODE_API_KEY"];
+  const requiredEnvVars = ["HASHNODE_API_URL", "HASHNODE_HOST"];
 
   for (const envVar of requiredEnvVars) {
     if (!process.env[envVar]) {
