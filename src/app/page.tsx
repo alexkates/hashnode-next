@@ -3,38 +3,6 @@ import { Button } from "@/components/ui/button";
 import { cn, fadeIn } from "@/lib/utils";
 import { GitHubLogoIcon, VercelLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
-import { Metadata } from "next/types";
-
-export async function generateMetadata() {
-  const title = "hashnode-next";
-  const description = "The fastest way to go headless with Hashnode";
-  const images = "https://hashnode-next.dev/opengraph-image.png";
-  const url = "https://hashnode-next.dev";
-
-  const metadata: Metadata = {
-    metadataBase: new URL("https://hashnode-next.dev"),
-    title,
-    description,
-    openGraph: {
-      title,
-      description,
-      type: "website",
-      siteName: title,
-      images,
-      url,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images,
-      creator: "@thealexkates",
-      site: "@thealexkates",
-    },
-  };
-
-  return metadata;
-}
 
 export default async function Page() {
   return (
