@@ -1,3 +1,4 @@
+import url from "@/hashnode/api-url";
 import { GetPostsDocument } from "@/hashnode/generated/graphql";
 import request from "graphql-request";
 
@@ -8,7 +9,7 @@ type Props = {
 
 export default async function getBlogPosts({ first = 20, after = undefined }: Props) {
   const { publication } = await request({
-    url: process.env.HASHNODE_API_URL!,
+    url,
     document: GetPostsDocument,
     variables: {
       host: process.env.HASHNODE_HOST!,
