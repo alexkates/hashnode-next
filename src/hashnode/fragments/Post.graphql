@@ -33,4 +33,5 @@ fragment Post on Post {
     name
     postsCount
   }
+  reactionCount
 }
