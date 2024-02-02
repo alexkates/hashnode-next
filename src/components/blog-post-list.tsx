@@ -23,7 +23,7 @@ function BlogPostList({ posts, query = "", sort = "", tags = "" }: Props) {
   const tagsArray = tags?.split(",").filter((t) => t !== "");
 
   return (
-    <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+    <ul className="flex flex-col gap-5">
       {sortedPosts
         .filter((post) => {
           const isMatchingQuery = post.content.text?.toLowerCase().includes(query?.toLowerCase() ?? "");
