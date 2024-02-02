@@ -1,6 +1,6 @@
 import AllBlogPostsList from "@/components/all-blog-posts-list";
 import BlogTagsFilter from "@/components/blog-tags-filter";
-import CardListSkeleton from "@/components/card-list-skeleton";
+import ParagraphSkeleton from "@/components/paragraph-skeleton";
 import Search from "@/components/search";
 import Sort from "@/components/sort";
 import { cn, fadeIn } from "@/lib/utils";
@@ -29,7 +29,7 @@ export default async function Page({
         </Suspense>
       </section>
       <section className={cn(fadeIn, "animation-delay-400")}>
-        <Suspense fallback={<CardListSkeleton />}>
+        <Suspense fallback={<ParagraphSkeleton />}>
           <AllBlogPostsList query={query} sort={sort} tags={tags} />
         </Suspense>
       </section>
