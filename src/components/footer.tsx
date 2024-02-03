@@ -24,7 +24,10 @@ function Footer() {
         .
       </span>
       <span className="text-center">
-        Template built by{" "}
+        <Link href="https://hashnode-next.dev" target="_blank" rel="noreferrer" className="underline">
+          Template
+        </Link>
+        &nbsp;built by&nbsp;
         <Link href="https://twitter.com/thealexkates" target="_blank" rel="noreferrer" className="underline">
           Alex Kates
         </Link>
