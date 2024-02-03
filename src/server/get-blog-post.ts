@@ -1,5 +1,5 @@
 import url from "@/hashnode/api-url";
-import { GetPostBySlugDocument } from "@/hashnode/generated/graphql";
+import { GetPostBySlugDocument, Post } from "@/hashnode/generated/graphql";
 import request from "graphql-request";
 
 type Props = {
@@ -16,5 +16,5 @@ export default async function getBlogPost({ slug }: Props) {
     },
   });
 
-  return publication?.post;
+  return publication?.post as Post;
 }
