@@ -25,7 +25,7 @@ export default function BlogPostListItem({ post }: Props) {
           </div>
         </div>
         <div className="flex flex-wrap gap-x-2">{post.tags?.map((tag) => <Badge key={tag.name}>{tag.name.toLocaleLowerCase()}</Badge>)}</div>
-        <span className="leading-tight text-sm">{post.brief}</span>
+        <span className="leading-tight text-sm text-muted-foreground">{post.brief}</span>
       </div>
     </li>
   );
