@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import "highlight.js/styles/github-dark-dimmed.min.css";
 import { Lightbulb } from "lucide-react";
-import Link from "next/link";
 import ReactMarkdown, { Components } from "react-markdown";
 import { Tweet } from "react-tweet";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -37,7 +36,10 @@ const components: Components = {
       return <iframe src={`https://www.youtube.com/embed/${youtubeId}`} allowFullScreen className="h-96 w-full" />;
     }
 
-    return <Link className={cn("underline underline-offset-4", className)} href={href ?? ""} target={target ?? "_blank"} {...props} />;
+    // Hashnode adds a style attribute to links, which we don't want
+    delete props.style;
+
+    return <a className={cn("underline underline-offset-4", className)} href={href ?? ""} target={target ?? "_blank"} {...props} />;
   },
   strong: ({ className, node: _n, ...props }) => <strong className={cn("font-bold", className)} {...props} />,
   p: (props) => <p className={cn("my-4", props.className)} {...props} />,
@@ -71,7 +73,7 @@ const components: Components = {
         <Alert className="my-8">
           <AlertDescription className="flex items-center">
             <Lightbulb className="mr-2 hidden h-5 w-5 sm:flex" />
-            <div className="flex flex-col">{props.children}</div>
+            <div className="flex flex-col" {...props} />
           </AlertDescription>
         </Alert>
       );
