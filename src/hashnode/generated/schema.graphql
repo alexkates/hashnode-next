@@ -743,6 +743,8 @@ type Mutation {
   """Reschedule a draft."""
   rescheduleDraft(input: RescheduleDraftInput!): RescheduleDraftPayload!
   resendWebhookRequest(input: ResendWebhookRequestInput!): ResendWebhookRequestPayload!
+  """Restores a deleted post."""
+  restorePost(input: RestorePostInput!): RestorePostPayload!
   scheduleDraft(
     """Information about the draft to be published."""
     input: ScheduleDraftInput!
@@ -792,8 +794,6 @@ type MyUser implements IUser & Node {
   dateJoined: DateTime
   """Whether or not the user is deactivated."""
   deactivated: Boolean!
-  """Email address of the user. Only available to the authenticated user."""
-  email: String
   """The users who are following this user"""
   followers(
     """The page number that should be returned."""
@@ -853,10 +853,6 @@ type MyUser implements IUser & Node {
   tagline: String
   """Returns a list of tags that the user follows."""
   tagsFollowing: [Tag!]!
-  """
-  Hashnode users are subscribed to a newsletter by default. This field can be used to unsubscribe from the newsletter. Only available to the authenticated user.
-  """
-  unsubscribeCode: String
   """
   The username of the user. It is unique and tied with user's profile URL. Example - https://hashnode.com/@username
   """
@@ -1608,7 +1604,7 @@ type PublicationNavbarItem {
   """The static page added to the navbar item."""
   page: StaticPage
   """The order of the navbar item."""
-  priority: Int
+  priority: Int @deprecated(reason: "Navbar items are already returned in the correct order. Priority value is not needed and might be 0 in most cases.")
   """The series added to the navbar item."""
   series: Series
   """The type of the navbar item, can be series, link or page."""
@@ -1646,6 +1642,10 @@ Connection to get list of posts in publications.
 Returns a list of edges which contains the posts in publication and cursor to the last item of the previous page.
 """
 input PublicationPostConnectionFilter {
+  """
+  Only return posts that are deleted. Query returns active posts by default, set this to true to return deleted posts.
+  """
+  deletedOnly: Boolean
   """Remove pinned post from the result set."""
   excludePinnedPost: Boolean
   """
@@ -1985,6 +1985,14 @@ type ResendWebhookRequestPayload {
   webhookMessage: WebhookMessage
 }
 
+input RestorePostInput {
+  id: ID!
+}
+
+type RestorePostPayload {
+  post: Post
+}
+
 """Information to help in seo related meta tags."""
 type SEO {
   """The description used in og:description tag for SEO purposes."""
@@ -2049,6 +2057,7 @@ enum Scope {
   recommend_publications
   remove_comment
   remove_reply
+  restore_post
   signup
   team_hashnode
   update_comment
@@ -2058,6 +2067,8 @@ enum Scope {
   write_draft
   write_post
   write_series
+  write_static_page
+  write_widget
 }
 
 """
@@ -2073,6 +2084,10 @@ type SearchPostConnection implements Connection {
 }
 
 input SearchPostsOfPublicationFilter {
+  """
+  Only return posts that are deleted. Query returns active posts by default, set this to true to return deleted posts.
+  """
+  deletedOnly: Boolean
   """The ID of publications to search from."""
   publicationId: ObjectId!
   """The query to be searched in post."""
