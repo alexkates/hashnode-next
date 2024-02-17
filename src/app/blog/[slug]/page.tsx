@@ -16,12 +16,16 @@ export async function generateMetadata({ params }: Props) {
   const post = await getBlogPost(params);
 
   const title = post?.seo?.title || post?.title;
+  const canonicalUrl = post?.canonicalUrl;
   const description = post?.seo?.description || post?.subtitle || post?.title;
   const images = post?.coverImage?.url;
 
   const metadata: Metadata = {
     title,
     description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title,
       description,
