@@ -10,6 +10,7 @@ fragment Post on Post {
     id
   }
   url
+  canonicalUrl
   author {
     name
     profilePicture
