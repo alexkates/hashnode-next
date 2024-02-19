@@ -1,6 +1,6 @@
 import { Mdx } from "@/components/mdx";
 import { cn, fadeIn } from "@/lib/utils";
-import getdraftDraft from "@/server/get-blog-post-draft";
+import getBlogPostDraft from "@/server/get-blog-post-draft";
 import { Metadata } from "next/types";
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props) {
-  const post = await getdraftDraft(params);
+  const post = await getBlogPostDraft(params);
   const title = post?.seo?.title || post?.title || "";
   const canonicalUrl = post?.canonicalUrl;
   const description = post?.seo?.description || post?.subtitle || post?.title || "";
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function Page({ params }: Props) {
-  const draft = await getdraftDraft(params);
+  const draft = await getBlogPostDraft(params);
 
   if (!draft) {
     return null;
